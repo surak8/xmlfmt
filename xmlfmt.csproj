@@ -19,11 +19,11 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>xmlfmt.xml</DocumentationFile>
+    <DocumentationFile>bin\debug\xmlfmt.xml</DocumentationFile>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <NoWarn>1591</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
@@ -32,11 +32,11 @@
     <PlatformTarget>x86</PlatformTarget>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>xmlfmt.xml</DocumentationFile>
+    <DocumentationFile>bin\release\xmlfmt.xml</DocumentationFile>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <NoWarn>1591</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup Label="AssemblyInfo">
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\NewAppProps.cs" />
+    <Compile Include="Source\OldAppProperties.cs" />
+    <Compile Include="Source\Logger.cs" />
   </ItemGroup>
   <ItemGroup Label="IDK">
     <Compile Include="Source\adriver.cs" />
@@ -56,11 +59,13 @@
   <ItemGroup Label="References">
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
