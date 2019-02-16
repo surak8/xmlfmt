@@ -22,7 +22,7 @@ namespace NSXmlfmt {
         [STAThread()]
         public static void Main(string[] args) {
             int exitCode = 0;
-            string filename;
+            string filename, inFile, outFile;
             NewAppProps nap;
 
             Logger.logDebug = false;
@@ -34,11 +34,14 @@ namespace NSXmlfmt {
                     Console.Error.WriteLine("file '" + filename + "' not found.");
                     exitCode = 2;
                 } else {
+                    inFile = Path.GetFullPath(filename);
+                    outFile = Path.Combine(Path.GetDirectoryName(inFile), "New" + Path.GetFileName(inFile));
+                    Console.Out.WriteLine("reading: " + inFile);
                     var anObj = readXmlFile<OldAppProps>(filename);
                     if (anObj != null) {
                         nap = new NewAppProps(anObj);
-                        string tet = writeNewXml("NewVersion.xml", nap);
-                        Console.Out.WriteLine("RESULT:=" + Environment.NewLine + tet + Environment.NewLine);
+                        Console.Out.WriteLine("re-writing " + outFile + " with parameters.");
+                        string tet = writeNewXml(outFile, nap);
                         Trace.WriteLine("RESULT:=" + Environment.NewLine + tet + Environment.NewLine);
                     }
                 }
@@ -49,12 +52,11 @@ namespace NSXmlfmt {
         static string writeNewXml(string v, NewAppProps newObj) {
             XmlSerializer xs;
             XmlWriterSettings xws;
-
             StringBuilder sb;
-            XmlSerializerNamespaces xns = new XmlSerializerNamespaces(new XmlQualifiedName[] {
-                new XmlQualifiedName ("","")
-            });
-
+            XmlSerializerNamespaces xns = new XmlSerializerNamespaces(
+                new XmlQualifiedName[] {
+                   new XmlQualifiedName ("","")
+                });
 
             xws = new XmlWriterSettings();
             xws.OmitXmlDeclaration = true;
@@ -62,31 +64,25 @@ namespace NSXmlfmt {
             xws.IndentChars = new string(' ', 4);
             using (XmlWriter xw = XmlWriter.Create(sb = new StringBuilder(), xws)) {
                 xs = new XmlSerializer(newObj.GetType());
+                // using 'xns' allows generation of the XML, WITHOUT the XSI/XSD namespaces (which are not used).
                 xs.Serialize(xw, newObj, xns);
             }
-            Console.Out.WriteLine("RESULT:=" + Environment.NewLine + sb.ToString() + Environment.NewLine);
             File.WriteAllText(v, sb.ToString());
             return sb.ToString();
         }
 
         static T readXmlFile<T>(string filename) where T : class {
+            XmlReaderSettings xrs;
             XmlSerializer xs;
             T anObj = default(T);
-            XmlReaderSettings xrs;
+
 
             try {
                 xrs = new XmlReaderSettings();
                 xrs.ConformanceLevel = ConformanceLevel.Fragment;
                 xrs.IgnoreComments = true;
                 xrs.IgnoreWhitespace = true;
-                NameTable nt = new NameTable();
-
-                XmlNamespaceManager xnsmgr = new XmlNamespaceManager(nt);
-                xnsmgr.AddNamespace("", "");
-
-                XmlParserContext ctx = new XmlParserContext(null, xnsmgr, null, XmlSpace.None);
-
-                using (XmlReader xr = XmlReader.Create(filename, xrs, ctx)) {
+                using (XmlReader xr = XmlReader.Create(filename, xrs)) {
                     xs = new XmlSerializer(typeof(T));
 
                     xs.UnknownAttribute += foundUnknownAttr;
@@ -101,26 +97,14 @@ namespace NSXmlfmt {
                     xs = null;
                 }
             } catch (Exception ex) {
-                Trace.WriteLine(decomposeMessage(ex));
+                Trace.WriteLine(Logger.decomposeException(ex));
                 throw;
             }
 
             return anObj;
         }
 
-        static string decomposeMessage(Exception ex) {
-            StringBuilder sb = new StringBuilder();
-            Exception ex0 = ex;
-
-            sb.AppendLine(ex.Message);
-            ex0 = ex.InnerException;
-            while (ex0 != null) {
-                sb.AppendLine("[" + ex0.GetType().Name + "] " + ex0.Message);
-                ex0 = ex0.InnerException;
-            }
-            return sb.ToString();
-        }
-
+        #region xml(read) serialization handling methods
         static void foundRefObj(object sender, UnreferencedObjectEventArgs e) {
             Logger.log(MethodBase.GetCurrentMethod());
         }
@@ -139,5 +123,6 @@ namespace NSXmlfmt {
         static void foundUnknownAttr(object sender, XmlAttributeEventArgs e) {
             Logger.log(MethodBase.GetCurrentMethod(), e.ObjectBeingDeserialized.GetType().Name + " has an unknown attribute " + e.Attr.Name + ", Value=" + e.Attr.Value + " (" + e.LineNumber + "," + e.LinePosition + ")");
         }
+        #endregion
     }
 }

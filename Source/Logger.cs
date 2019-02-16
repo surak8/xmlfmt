@@ -3,13 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Text;
 
-namespace NSXmlfmt
-{
+namespace NSXmlfmt {
 
     /// <summary>logging class.</summary>
-    public static class Logger
-    {
+    public static class Logger {
 
         #region fields
         /// <summary>controls logging-style.</summary>
@@ -31,8 +30,7 @@ namespace NSXmlfmt
         /// <seealso cref="logDebug"/>
         /// <seealso cref="logUnique"/>
         /// <seealso cref="msgs"/>
-        public static void log(string msg)
-        {
+        public static void log(string msg) {
             if (logUnique) {
                 if (msgs.Contains(msg))
                     return;
@@ -52,8 +50,7 @@ namespace NSXmlfmt
         /// <param name="mb"/>
         /// <seealso cref="makeSig"/>
         /// <seealso cref="log(MethodBase,string)"/>
-        public static void log(MethodBase mb)
-        {
+        public static void log(MethodBase mb) {
             log(mb, string.Empty);
         }
 
@@ -62,13 +59,11 @@ namespace NSXmlfmt
         /// <param name="msg"/>
         /// <seealso cref="makeSig"/>
         /// <seealso cref="log(MethodBase,string)"/>
-        public static void log(MethodBase mb, string msg)
-        {
+        public static void log(MethodBase mb, string msg) {
             log(makeSig(mb) + ":" + msg);
         }
 
-        public static void log(MethodBase mb, Exception ex)
-        {
+        public static void log(MethodBase mb, Exception ex) {
             log(makeSig(mb) + ":" + ex.Message);
         }
         #endregion logging-methods
@@ -76,11 +71,25 @@ namespace NSXmlfmt
         #region misc. methods
         /// <summary>create a method-signature.</summary>
         /// <returns></returns>
-        public static string makeSig(MethodBase mb)
-        {
+        public static string makeSig(MethodBase mb) {
             return mb.ReflectedType.Name + "." + mb.Name;
         }
         #endregion misc. methods
         #endregion methods
+
+
+        public static string decomposeException(Exception ex) {
+            StringBuilder sb = new StringBuilder();
+            Exception ex0 = ex;
+
+            sb.AppendLine(ex.Message);
+            ex0 = ex.InnerException;
+            while (ex0 != null) {
+                sb.AppendLine("[" + ex0.GetType().Name + "] " + ex0.Message);
+                ex0 = ex0.InnerException;
+            }
+            return sb.ToString();
+        }
+
     }
 }

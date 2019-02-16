@@ -54,7 +54,7 @@
     <Compile Include="Source\Logger.cs" />
   </ItemGroup>
   <ItemGroup Label="IDK">
-    <Compile Include="Source\adriver.cs" />
+    <Compile Include="Source\xmlfmt_driver.cs" />
   </ItemGroup>
   <ItemGroup Label="References">
     <Reference Include="System" />
