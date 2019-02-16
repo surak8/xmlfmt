@@ -5,15 +5,15 @@ using System.Runtime.InteropServices;
 [assembly:AssemblyProduct("xmlfmt")]
 [assembly:AssemblyDescription("description of xmlfmt.")]
 [assembly:AssemblyCompany("Rik Cousens")]
-[assembly:AssemblyCopyright("Copyright © 2016, Rik Cousens")]
+[assembly:AssemblyCopyright("Copyright © 2016-2019, Rik Cousens")]
 #if DEBUG
-[assembly:AssemblyConfiguration("Debug assemblyVersion")]
+[assembly:AssemblyConfiguration("Debug version")]
 #else
-[assembly:AssemblyConfiguration("Release assemblyVersion")]
+[assembly:AssemblyConfiguration("Release version")]
 #endif
 [assembly:ComVisible(false)]
 
-[assembly:AssemblyVersion("1.0.0.0")]
-[assembly:AssemblyFileVersion("1.0.0.0")]
-[assembly:AssemblyInformationalVersion("1.0.0.0")]
+[assembly:AssemblyVersion("1.0.1.0")]
+//[assembly:AssemblyFileVersion("1.0.0.0")]
+//[assembly:AssemblyInformationalVersion("1.0.0.0")]
 
