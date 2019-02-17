@@ -14,7 +14,7 @@ namespace NSXmlfmt {
         [XmlArray("ColumnHeaders"), XmlArrayItem("ColumnHeader")]
         public NewColHeader[] headers;
 
-        [XmlArray("AcceptableStates"), XmlArrayItem("string")]
+        [XmlArray("AcceptableStates"), XmlArrayItem("AcceptableState")]
         public string[] stateAbbrevs;
 
         [XmlAttribute("ConnectionStringEpicor")]
@@ -78,7 +78,7 @@ namespace NSXmlfmt {
         [XmlAttribute("Name")]
         public string headerName;
 
-        [XmlArray("Synonyms"), XmlArrayItem("string")]
+        [XmlArray("Synonyms"), XmlArrayItem("Synonym")]
         public string[] synonyms;
         #endregion
 
@@ -111,7 +111,7 @@ namespace NSXmlfmt {
 
     public class NewDistrib {
         #region fields
-        [XmlArray("Synonyms"), XmlArrayItem("string")]
+        [XmlArray("Synonyms"), XmlArrayItem("Synonym")]
         public string[] syns;
 
         [XmlAttribute("Name")]

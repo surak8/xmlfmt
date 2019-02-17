@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Text;
+using System.Xml.Serialization;
 
 /// <summary>Seb's current XML layout.</summary>
 /// <remarks>
@@ -24,6 +25,18 @@ public class OldAppProps {
     [XmlArray("Distributors"), XmlArrayItem("Distributor")]
     public OldDistrib[] distributors;
     #endregion
+
+
+    public override string ToString() {
+        StringBuilder sb = new StringBuilder();
+
+
+        sb.AppendLine("ConnectionStringEpicor:" + epicorConnStr + " " +
+            "ColumnHeaders:" + (headers == null ? "none" : this.headers.Length.ToString()) + " " +
+             "AcceptableStates:" + (stateAbbreviations == null ? "none" : this.stateAbbreviations.Length.ToString()) + " " +
+                       "Distributors:" + (headers == null ? "none" : this.distributors.Length.ToString()) + ".");
+        return base.ToString() + " " + sb.ToString();
+    }
 }
 
 public class OldColHeaders {
@@ -32,19 +45,38 @@ public class OldColHeaders {
     public string headerName;
 
     [XmlArray("Synonyms"), XmlArrayItem("string")]
-    public string[] synonyms; 
+    public string[] synonyms;
     #endregion
+    public override string ToString() {
+        StringBuilder sb = new StringBuilder();
+
+
+        sb.AppendLine("Name:" + headerName + " " +
+            "Synonyms:" + (synonyms == null ? "none" : this.synonyms.Length.ToString()) + " " +
+         ".");
+        return base.ToString() + " " + sb.ToString();
+    }
 }
 
 public class OldDistrib {
     #region fields
     [XmlElement("Name")]
     public string distributorName;
+
     [XmlElement("EpicorId")]
     public int epicorId;
+
     [XmlElement("Group")]
     public int distributorGroup;
+
     [XmlArray("Synonyms"), XmlArrayItem("string")]
-    public string[] blah; 
+    public string[] blah;
     #endregion
+
+    public override string ToString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.AppendLine("Distributor:" + distributorName+" Group:"+distributorGroup+" Synonyms:"+(blah==null?"none":this.blah.Length.ToString())+".");
+        return base.ToString()+" "+sb.ToString();
+    }
 }
