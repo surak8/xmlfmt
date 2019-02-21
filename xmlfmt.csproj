@@ -49,14 +49,13 @@
   </ItemGroup>
   <ItemGroup Label="AssemblyInfo">
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\inference_util.cs" />
     <Compile Include="Source\NewAppProps.cs" />
     <Compile Include="Source\OldAppProperties.cs" />
     <Compile Include="Source\Logger.cs" />
   </ItemGroup>
-  <ItemGroup Label="IDK">
-    <Compile Include="Source\xmlfmt_driver.cs" />
-  </ItemGroup>
   <ItemGroup Label="References">
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
