@@ -1,200 +1,200 @@
 <?xml version="1.0"?>
 <ApplicationProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ColumnHeaders>
-    <ColumnHeader>
-      <Name>Customer Number</Name>
-      <Synonyms>
-        <string>Customer Number</string>
-        <string>Colt Customer #</string>
-        <string>Distributor</string>
-        <string>Customer</string>
-        <string>Colt Dist#</string>
-      </Synonyms>
-    </ColumnHeader>
-    <ColumnHeader>
-      <Name>Period</Name>
-      <Synonyms>
-        <string>Period</string>
-        <string>Invoice Date</string>
-        <string>Date</string>
-        <string>YEAR/MONTH</string>
-      </Synonyms>
-    </ColumnHeader>
-    <ColumnHeader>
-      <Name>Part Number</Name>
-      <Synonyms>
-        <string>Part Number</string>
-        <string>Colt Part</string>
-        <string>Colt Model No.</string>
-        <string>Part</string>
-        <string>Model</string>
-        <string>Colt Model</string>
-        <string>MFG#</string>
-      </Synonyms>
-    </ColumnHeader>
-    <ColumnHeader>
-      <Name>State</Name>
-      <Synonyms>
-        <string>State</string>
-      </Synonyms>
-    </ColumnHeader>
-    <ColumnHeader>
-      <Name>Quantity</Name>
-      <Synonyms>
-        <string>Quantity</string>
-        <string>Qty Sold</string>
-        <string>Qty</string>
-        <string>UNITS SOLD</string>
-        <string>Sold</string>
-      </Synonyms>
-    </ColumnHeader>
-  </ColumnHeaders>
-  <AcceptableStates>
-    <string>AL</string>
-    <string>AK</string>
-    <string>AZ</string>
-    <string>AR</string>
-    <string>CA</string>
-    <string>CO</string>
-    <string>CT</string>
-    <string>DE</string>
-    <string>DC</string>
-    <string>FL</string>
-    <string>GA</string>
-    <string>HI</string>
-    <string>ID</string>
-    <string>IL</string>
-    <string>IN</string>
-    <string>IA</string>
-    <string>KS</string>
-    <string>KY</string>
-    <string>LA</string>
-    <string>ME</string>
-    <string>MD</string>
-    <string>MA</string>
-    <string>MI</string>
-    <string>MN</string>
-    <string>MS</string>
-    <string>MO</string>
-    <string>MT</string>
-    <string>NE</string>
-    <string>NV</string>
-    <string>NH</string>
-    <string>NJ</string>
-    <string>NM</string>
-    <string>NY</string>
-    <string>NC</string>
-    <string>ND</string>
-    <string>OH</string>
-    <string>OK</string>
-    <string>OR</string>
-    <string>PA</string>
-    <string>RI</string>
-    <string>SC</string>
-    <string>SD</string>
-    <string>TN</string>
-    <string>TX</string>
-    <string>UT</string>
-    <string>VT</string>
-    <string>VA</string>
-    <string>WA</string>
-    <string>WV</string>
-    <string>WI</string>
-    <string>WY</string>
-    <string>PR</string>
-    <string>GU</string>
-  </AcceptableStates>
-  <ConnectionStringEpicor>Data Source=colt-erpsql;Initial Catalog=EpicorERP;Persist Security Info=True;User ID=userrpts;Password=ColtODBC</ConnectionStringEpicor>
-  <Distribiutors>
-    <Distribiutor>
-      <Name>BANGERS L.P.</Name>
-      <EpicorId>78</EpicorId>
-      <Synonyms>
-        <string>BANGERS L.P.</string>
-        <string>Bangers</string>
-        <string>78(Bangers)</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>W.L.Baumler Co.Inc.</Name>
-      <EpicorId>466</EpicorId>
-      <Synonyms>
-        <string>W.L.Baumler Co.Inc.</string>
-        <string>WL Baumler</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>BILL HICKS &amp; CO LTD</Name>
-      <EpicorId>90</EpicorId>
-      <Synonyms>
-        <string>BILL HICKS &amp; CO LTD</string>
-        <string>Bill Hicks</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>Davidson's West</Name>
-      <EpicorId>82</EpicorId>
-      <Synonyms>
-        <string>Davidson's West</string>
-        <string>Davidsons</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>Ellett Brothers,Inc.</Name>
-      <EpicorId>84</EpicorId>
-      <Synonyms>
-        <string>Ellett Brothers,Inc.</string>
-        <string>Ellett</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>JSC Purchasing &amp; Admin, Inc</Name>
-      <EpicorId>146</EpicorId>
-      <Synonyms>
-        <string>JSC Purchasing &amp; Admin, Inc</string>
-        <string>Jerry's</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>Lew Horton Dis.Co.,Inc.</Name>
-      <EpicorId>92</EpicorId>
-      <Synonyms>
-        <string>Lew Horton Dis.Co.,Inc.</string>
-        <string>Lew Horton</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>LIPSEY'S, LLC</Name>
-      <EpicorId>51991</EpicorId>
-      <Synonyms>
-        <string>LIPSEY'S, LLC</string>
-        <string>Lipseys</string>
-        <string>Lipsey's</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>RSR Group Inc.</Name>
-      <EpicorId>15982</EpicorId>
-      <Synonyms>
-        <string>RSR Group Inc.</string>
-        <string>RSR</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>SPORTS SOUTH, LLC</Name>
-      <EpicorId>116</EpicorId>
-      <Synonyms>
-        <string>SPORTS SOUTH, LLC</string>
-        <string>Sports South</string>
-      </Synonyms>
-    </Distribiutor>
-    <Distribiutor>
-      <Name>GLENN ZANDERS FUR AND SPORTING GDS</Name>
-      <EpicorId>395</EpicorId>
-      <Synonyms>
-        <string>GLENN ZANDERS FUR AND SPORTING GDS</string>
-        <string>Zanders</string>
-      </Synonyms>
-    </Distribiutor>
-  </Distribiutors>
+    <ColumnHeaders>
+        <ColumnHeader>
+            <Name>Customer Number</Name>
+            <Synonyms>
+                <Synonym>Customer Number</Synonym>
+                <Synonym>Colt Customer #</Synonym>
+                <Synonym>Distributor</Synonym>
+                <Synonym>Customer</Synonym>
+                <Synonym>Colt Dist#</Synonym>
+            </Synonyms>
+        </ColumnHeader>
+        <ColumnHeader>
+            <Name>Period</Name>
+            <Synonyms>
+                <Synonym>Period</Synonym>
+                <Synonym>Invoice Date</Synonym>
+                <Synonym>Date</Synonym>
+                <Synonym>YEAR/MONTH</Synonym>
+            </Synonyms>
+        </ColumnHeader>
+        <ColumnHeader>
+            <Name>Part Number</Name>
+            <Synonyms>
+                <Synonym>Part Number</Synonym>
+                <Synonym>Colt Part</Synonym>
+                <Synonym>Colt Model No.</Synonym>
+                <Synonym>Part</Synonym>
+                <Synonym>Model</Synonym>
+                <Synonym>Colt Model</Synonym>
+                <Synonym>MFG#</Synonym>
+            </Synonyms>
+        </ColumnHeader>
+        <ColumnHeader>
+            <Name>State</Name>
+            <Synonyms>
+                <Synonym>State</Synonym>
+            </Synonyms>
+        </ColumnHeader>
+        <ColumnHeader>
+            <Name>Quantity</Name>
+            <Synonyms>
+                <Synonym>Quantity</Synonym>
+                <Synonym>Qty Sold</Synonym>
+                <Synonym>Qty</Synonym>
+                <Synonym>UNITS SOLD</Synonym>
+                <Synonym>Sold</Synonym>
+            </Synonyms>
+        </ColumnHeader>
+    </ColumnHeaders>
+    <AcceptableStates>
+        <AbbreviatedState>AL</AbbreviatedState>
+        <AbbreviatedState>AK</AbbreviatedState>
+        <AbbreviatedState>AZ</AbbreviatedState>
+        <AbbreviatedState>AR</AbbreviatedState>
+        <AbbreviatedState>CA</AbbreviatedState>
+        <AbbreviatedState>CO</AbbreviatedState>
+        <AbbreviatedState>CT</AbbreviatedState>
+        <AbbreviatedState>DE</AbbreviatedState>
+        <AbbreviatedState>DC</AbbreviatedState>
+        <AbbreviatedState>FL</AbbreviatedState>
+        <AbbreviatedState>GA</AbbreviatedState>
+        <AbbreviatedState>HI</AbbreviatedState>
+        <AbbreviatedState>ID</AbbreviatedState>
+        <AbbreviatedState>IL</AbbreviatedState>
+        <AbbreviatedState>IN</AbbreviatedState>
+        <AbbreviatedState>IA</AbbreviatedState>
+        <AbbreviatedState>KS</AbbreviatedState>
+        <AbbreviatedState>KY</AbbreviatedState>
+        <AbbreviatedState>LA</AbbreviatedState>
+        <AbbreviatedState>ME</AbbreviatedState>
+        <AbbreviatedState>MD</AbbreviatedState>
+        <AbbreviatedState>MA</AbbreviatedState>
+        <AbbreviatedState>MI</AbbreviatedState>
+        <AbbreviatedState>MN</AbbreviatedState>
+        <AbbreviatedState>MS</AbbreviatedState>
+        <AbbreviatedState>MO</AbbreviatedState>
+        <AbbreviatedState>MT</AbbreviatedState>
+        <AbbreviatedState>NE</AbbreviatedState>
+        <AbbreviatedState>NV</AbbreviatedState>
+        <AbbreviatedState>NH</AbbreviatedState>
+        <AbbreviatedState>NJ</AbbreviatedState>
+        <AbbreviatedState>NM</AbbreviatedState>
+        <AbbreviatedState>NY</AbbreviatedState>
+        <AbbreviatedState>NC</AbbreviatedState>
+        <AbbreviatedState>ND</AbbreviatedState>
+        <AbbreviatedState>OH</AbbreviatedState>
+        <AbbreviatedState>OK</AbbreviatedState>
+        <AbbreviatedState>OR</AbbreviatedState>
+        <AbbreviatedState>PA</AbbreviatedState>
+        <AbbreviatedState>RI</AbbreviatedState>
+        <AbbreviatedState>SC</AbbreviatedState>
+        <AbbreviatedState>SD</AbbreviatedState>
+        <AbbreviatedState>TN</AbbreviatedState>
+        <AbbreviatedState>TX</AbbreviatedState>
+        <AbbreviatedState>UT</AbbreviatedState>
+        <AbbreviatedState>VT</AbbreviatedState>
+        <AbbreviatedState>VA</AbbreviatedState>
+        <AbbreviatedState>WA</AbbreviatedState>
+        <AbbreviatedState>WV</AbbreviatedState>
+        <AbbreviatedState>WI</AbbreviatedState>
+        <AbbreviatedState>WY</AbbreviatedState>
+        <AbbreviatedState>PR</AbbreviatedState>
+        <AbbreviatedState>GU</AbbreviatedState>
+    </AcceptableStates>
+    <ConnectionStringEpicor>Data Source=colt-erpsql;Initial Catalog=EpicorERP;Persist Security Info=True;User ID=userrpts;Password=ColtODBC</ConnectionStringEpicor>
+    <Distributors>
+        <Distributor>
+            <Name>BANGERS L.P.</Name>
+            <EpicorId>78</EpicorId>
+            <Synonyms>
+                <Synonym>BANGERS L.P.</Synonym>
+                <Synonym>Bangers</Synonym>
+                <Synonym>78(Bangers)</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>W.L.Baumler Co.Inc.</Name>
+            <EpicorId>466</EpicorId>
+            <Synonyms>
+                <Synonym>W.L.Baumler Co.Inc.</Synonym>
+                <Synonym>WL Baumler</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>BILL HICKS &amp; CO LTD</Name>
+            <EpicorId>90</EpicorId>
+            <Synonyms>
+                <Synonym>BILL HICKS &amp; CO LTD</Synonym>
+                <Synonym>Bill Hicks</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>Davidson's West</Name>
+            <EpicorId>82</EpicorId>
+            <Synonyms>
+                <Synonym>Davidson's West</Synonym>
+                <Synonym>Davidsons</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>Ellett Brothers,Inc.</Name>
+            <EpicorId>84</EpicorId>
+            <Synonyms>
+                <Synonym>Ellett Brothers,Inc.</Synonym>
+                <Synonym>Ellett</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>JSC Purchasing &amp; Admin, Inc</Name>
+            <EpicorId>146</EpicorId>
+            <Synonyms>
+                <Synonym>JSC Purchasing &amp; Admin, Inc</Synonym>
+                <Synonym>Jerry's</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>Lew Horton Dis.Co.,Inc.</Name>
+            <EpicorId>92</EpicorId>
+            <Synonyms>
+                <Synonym>Lew Horton Dis.Co.,Inc.</Synonym>
+                <Synonym>Lew Horton</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>LIPSEY'S, LLC</Name>
+            <EpicorId>51991</EpicorId>
+            <Synonyms>
+                <Synonym>LIPSEY'S, LLC</Synonym>
+                <Synonym>Lipseys</Synonym>
+                <Synonym>Lipsey's</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>RSR Group Inc.</Name>
+            <EpicorId>15982</EpicorId>
+            <Synonyms>
+                <Synonym>RSR Group Inc.</Synonym>
+                <Synonym>RSR</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>SPORTS SOUTH, LLC</Name>
+            <EpicorId>116</EpicorId>
+            <Synonyms>
+                <Synonym>SPORTS SOUTH, LLC</Synonym>
+                <Synonym>Sports South</Synonym>
+            </Synonyms>
+        </Distributor>
+        <Distributor>
+            <Name>GLENN ZANDERS FUR AND SPORTING GDS</Name>
+            <EpicorId>395</EpicorId>
+            <Synonyms>
+                <Synonym>GLENN ZANDERS FUR AND SPORTING GDS</Synonym>
+                <Synonym>Zanders</Synonym>
+            </Synonyms>
+        </Distributor>
+    </Distributors>
 </ApplicationProperties>
