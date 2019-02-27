@@ -12,4 +12,4 @@ using System.Runtime.InteropServices;
 [assembly:AssemblyConfiguration("Release version")]
 #endif
 [assembly:ComVisible(false)]
-[assembly:AssemblyVersion("1.0.3.12")]
+[assembly:AssemblyVersion("1.0.3.13")]
