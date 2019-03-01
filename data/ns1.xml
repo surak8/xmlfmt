@@ -1,0 +1,10 @@
+<doc>
+    <assembly>
+        <name>xmlfmt</name>
+    </assembly>
+    <members>
+        <member name="N:NSXmlfmt">
+		<summary>test for namespace</summary>
+		</member>
+	</members>
+</doc>

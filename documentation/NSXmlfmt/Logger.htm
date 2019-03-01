@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <title>Logger - xmlfmt Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <link type="text/css" rel="stylesheet" href="../main.css"/>
+    <script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript" src="../js/navigation.js"></script>
+    <script type="text/javascript" src="../js/example.js"></script>
+  </head>
+  <body>
+  	<header><h1>xmlfmt : API Documentation</h1>
+	</header>
+<nav id="namespaces">
+	<h2 class="fixed">Namespaces</h2>
+	<div class="scroll">
+		<ul>
+			<li>
+          <a href="../NSXmlfmt/index.htm" class="current">NSXmlfmt</a>
+      </li>
+			<li>
+          <a href="../NSXmlSerializers/index.htm">NSXmlSerializers</a>
+      </li>
+		</ul>
+	</div>
+</nav><nav id="types">
+  <h2 class="fixed">Types in NSXmlfmt</h2>
+	<div class="scroll">
+		<ul>
+				<li>
+            <a href="../NSXmlfmt/Logger.htm" class="current">Logger</a>
+        </li>
+				<li>
+            <a href="../NSXmlfmt/NewAppProps.htm">NewAppProps</a>
+        </li>
+				<li>
+            <a href="../NSXmlfmt/NewColHeader.htm">NewColHeader</a>
+        </li>
+				<li>
+            <a href="../NSXmlfmt/NewDistrib.htm">NewDistrib</a>
+        </li>
+		</ul>
+	</div>
+</nav>
+	<article>
+    <header>
+		<p class="class"><strong>Type</strong> Logger</p>
+	</header>
+	<section>
+		<header>
+		<p><strong>Namespace</strong> NSXmlfmt</p>
+		</header>
+    <div class="sub-header">
+			<div id="summary">logging class. 
+			</div>
+		
+		
+			<h3 class="section">Methods</h3>
+			<ul>
+				<li><a href="../NSXmlfmt/Logger.htm#decomposeException">decomposeException</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#log">log</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#log">log</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#log">log</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#log">log</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#makeSig">makeSig</a></li>
+			</ul>
+		
+		
+			<h3 class="section">Fields</h3>
+			<ul>
+				<li><a href="../NSXmlfmt/Logger.htm#logDebug">logDebug</a></li>
+				<li><a href="../NSXmlfmt/Logger.htm#logUnique">logUnique</a></li>
+			</ul>
+	</div>
+	
+	
+	<h3 class="section">Public static methods</h3>
+
+	<div id="decomposeException" class="method">
+		<h4>
+			<span title="System.string">string</span> <strong>decomposeException</strong>(<span title="System.Exception">Exception</span> ex)
+		</h4>
+		<div class="content">Recurse through the  <span title="System.Exception">Exception</span>  structure, and
+show all inner errors. 
+
+
+
+			<div class="return">
+
+				<h5>Returns</h5>
+				<dl>
+					<dt>
+						<code><span title="System.string">string</span></code>
+					</dt>
+					<dd>a  <a href="../System/String.htm">String</a>  containing the  <a href="../System/Exception.htm">Exception</a>  messages. 
+					</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+	<div id="log" class="method">
+		<h4>
+			<span title="System.void">void</span> <strong>log</strong>(<span title="System.Reflection.MethodBase">MethodBase</span> mb, <span title="System.Exception">Exception</span> ex)
+		</h4>
+		<div class="content">Log a location and  <span title="System.Exception">Exception</span> 
+
+
+
+
+		</div>
+	</div>
+	<div id="log" class="method">
+		<h4>
+			<span title="System.void">void</span> <strong>log</strong>(<span title="System.string">string</span> msg)
+		</h4>
+		<div class="content">log a message <blockquote class="remarks">
+  <p>log to the  <span title="System.Diagnostics.Debug">Debug</span>  and/or  <span title="System.Diagnostics.Trace">Trace</span>  loggers. </p> 
+</blockquote>
+
+
+
+
+		</div>
+	</div>
+	<div id="log" class="method">
+		<h4>
+			<span title="System.void">void</span> <strong>log</strong>(<span title="System.Reflection.MethodBase">MethodBase</span> mb)
+		</h4>
+		<div class="content">log a message 
+
+
+
+
+		</div>
+	</div>
+	<div id="log" class="method">
+		<h4>
+			<span title="System.void">void</span> <strong>log</strong>(<span title="System.Reflection.MethodBase">MethodBase</span> mb, <span title="System.string">string</span> msg)
+		</h4>
+		<div class="content">log a message 
+
+
+
+
+		</div>
+	</div>
+	<div id="makeSig" class="method">
+		<h4>
+			<span title="System.string">string</span> <strong>makeSig</strong>(<span title="System.Reflection.MethodBase">MethodBase</span> mb)
+		</h4>
+		<div class="content">create a method-signature. 
+
+
+
+
+		</div>
+	</div>
+	
+  <h3 class="section">Public fields</h3>
+
+  <div id="logDebug" class="method">
+    <h4>bool <strong>logDebug</strong></h4>
+    <div class="content">controls logging-style. 
+      <table>
+        <tr>
+          <td>
+            <code>return <span title="System.bool">bool</span></code>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="logUnique" class="method">
+    <h4>bool <strong>logUnique</strong></h4>
+    <div class="content">controls logging-style. 
+      <table>
+        <tr>
+          <td>
+            <code>return <span title="System.bool">bool</span></code>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+	</section>
+	</article><footer>
+	<span id="version">Built from v1.0.3.3 of xmlfmt</span>
+	<span id="docu-link">
+		Generated by <a href="http://docu.jagregory.com">docu</a>
+	</span>
+</footer>
+  </body>
+</html>

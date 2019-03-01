@@ -30,6 +30,7 @@ namespace NSXmlfmt {
         /// <seealso cref="logDebug"/>
         /// <seealso cref="logUnique"/>
         /// <seealso cref="msgs"/>
+        /// <remarks><para>log to the <see cref="Debug"/> and/or <see cref="Trace"/> loggers.</para></remarks>
         public static void log(string msg) {
             if (logUnique) {
                 if (msgs.Contains(msg))
@@ -63,9 +64,13 @@ namespace NSXmlfmt {
             log(makeSig(mb) + ":" + msg);
         }
 
+        /// <summary>Log a location and <see cref="Exception"/></summary>
+        /// <param name="mb"></param>
+        /// <param name="ex"></param>
         public static void log(MethodBase mb, Exception ex) {
             log(makeSig(mb) + ":" + ex.Message);
         }
+
         #endregion logging-methods
 
         #region misc. methods
@@ -77,7 +82,13 @@ namespace NSXmlfmt {
         #endregion misc. methods
         #endregion methods
 
-
+        /// <summary>Recurse through the <see cref="Exception"/> structure, and 
+        /// show all inner errors.</summary>
+        /// <param name="ex"></param>
+        /// <returns>a <see cref="string"/> containing the <see cref="Exception"/> messages.</returns>
+        /// <seealso cref="StringBuilder"/>
+        /// <seealso cref="Exception"/>
+        /// <seealso cref="Exception.InnerException"/>
         public static string decomposeException(Exception ex) {
             StringBuilder sb = new StringBuilder();
             Exception ex0 = ex;
@@ -90,6 +101,5 @@ namespace NSXmlfmt {
             }
             return sb.ToString();
         }
-
     }
 }

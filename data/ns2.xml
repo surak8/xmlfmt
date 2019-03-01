@@ -1,0 +1,10 @@
+<doc>
+    <assembly>
+        <name>xmlfmt.XmlSerializers</name>
+    </assembly>
+    <members>
+        <member name="N:xmlfmt.XmlSerializers">
+            <summary>test2.</summary>
+        </member>
+    </members>
+</doc>

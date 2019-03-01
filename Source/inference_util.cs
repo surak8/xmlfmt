@@ -9,7 +9,10 @@ using System.Xml.Schema;
 using System.Xml.Serialization;
 using NSXmlfmt;
 
+/// <summary>the driver.</summary>
 public class driver {
+    /// <summary>main-line program.</summary>
+    /// <param name="args"></param>
     [STAThread()]
     public static void Main(string[] args) {
         int exitCode = 0;
@@ -41,6 +44,12 @@ public class driver {
         Environment.Exit(exitCode);
     }
 
+    /// <summary>
+    /// Read the input-file, try to determine the types if items required
+    /// for serialization.</summary>
+    /// <param name="inFile"></param>
+    /// <returns></returns>
+    /// <seealso cref="XmlSchemaInference"/>
     static XmlSchema inferSchema(string inFile) {
         XmlSchemaSet xss;
         XmlSchemaInference xsi = new XmlSchemaInference();
@@ -50,7 +59,7 @@ public class driver {
         CodeDomProvider cdp;
         CodeGeneratorOptions opts;
         CompilerParameters cp;
-        int asmNo = 0;
+        //int asmNo = 0;
         string tmp;
 
         cdp = new Microsoft.CSharp.CSharpCodeProvider();

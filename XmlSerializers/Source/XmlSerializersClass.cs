@@ -10,7 +10,6 @@
 
 
 namespace NSXmlSerializers {
-    
-    public class XmlSerializersClass {
-    }
+    /// <summary>Fake class in non-sensical assembly to suppress stupid XmlSerializers exception.</summary>
+    public class XmlSerializersClass { }
 }
